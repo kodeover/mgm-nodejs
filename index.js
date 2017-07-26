@@ -2,10 +2,14 @@ var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
-var hostname = 'localhost';
-var port = 3000;
+// var hostname = 'localhost';
+// var port = 3000;
+
 
 var app = express();
+
+app.set('port', (process.env.PORT || 5000));
+
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -78,6 +82,10 @@ app.post('/send-message', function (req, res, next) {
     }
 });
 
-app.listen(port, hostname, function () {
-    console.log(`Server running at http://${hostname}:${port}/`);
+// app.listen(port, hostname, function () {
+//     console.log(`Server running at http://${hostname}:${port}/`);
+// });
+
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
 });
