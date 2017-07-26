@@ -1,0 +1,758 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Offside|Questrial|Righteous|Text+Me+One');
+
+$logo-font: 'Offside', cursive;
+$main-font: 'Questrial', sans-serif;
+$text-me: 'Text Me One', sans-serif;
+
+// Color
+
+$main-color: #181366;
+$card_bg: #4e95d2;
+
+// Mixin
+
+@mixin title-font() {
+  background: -webkit-linear-gradient(#4e95d2, #050030);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: $text-me;
+  font-size: 3rem;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  //background-color: #fafafa;
+}
+
+.main_section {
+  background-color: #fafafa;
+  z-index: 50;
+}
+
+//#despre, #products, #photo-gallery, #contact_section {
+//  background-color: #fafafa;
+//  z-index: 999;
+//}
+
+.self_valign {
+  display:-webkit-flex;
+  display:-ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.sticky {
+  background-color: #fafafa;
+  color: $main-color;
+
+}
+
+.sticky_items {
+  color: #204259 !important;
+}
+
+#nav_bar {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+
+  #logo-container {
+    color: white;
+    font-size: 1.1rem;
+    font-family: $logo-font;
+
+    span {
+      font-weight: 900;
+    }
+
+    .main_logo {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+  }
+
+  a.button_collapse {
+    margin-right: 0;
+    float: right;
+  }
+
+  ul a {
+    color: white;
+    font-size: 1.1em;
+  }
+}
+
+//end nav bar
+
+//Side NAV
+
+.fix_the_body {
+  overflow: hidden;
+  width: 100%;
+}
+
+.side_overlay {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(13, 43, 61, 0.94);
+  z-index: 10;
+  transition-duration: 1s;
+}
+
+#nav_mobile {
+  width: 70%;
+  height: 305px;
+  display: none;
+  position: relative;
+  margin-top: calc((100vh - 360px) / 2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nav_mobile li {
+  width: 100%;
+}
+
+.side_nav li a {
+  color: white !important;
+  height: 3.5rem;
+
+  margin-bottom: 5px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 20px;
+
+}
+
+.side_menu_btn {
+  position: fixed;
+}
+
+.enter_side_nav {
+  transform: translateX(0px);
+  left: calc((100% - 250px) / 2);
+}
+
+//End sidenav
+
+// === Index Banner ===
+#index-banner {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  //background: rgba(24, 37, 123, 0.78);
+  //background: linear-gradient(to right, rgba(54, 37, 75, 0.85), rgba(35, 50, 75, 0.85));
+  //background: linear-gradient(to bottom, rgba(75, 2, 6, 0.86), rgba(6, 13, 75, 0.86));
+  //background: linear-gradient(to bottom, rgba(45, 21, 77, 0.85), rgba(33, 61, 76, 0.85));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(52, 96, 135, 0.8));
+  width: 100%;
+
+
+
+  #video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+
+  }
+  h1 {
+    width: 80%;
+    margin: 0;
+    font-size: 2.8rem;
+    color: ghostwhite;
+    letter-spacing: .1rem;
+    background: -webkit-linear-gradient(#3beeec, #d4d2ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    //left: 10%;
+    height: auto;
+    //top: 30%;
+  }
+}
+
+//==========================================
+//nav ul a,
+//nav .brand-logo {
+//  color: #444;
+//}
+
+p {
+  line-height: 2rem;
+}
+
+#parallax_section{
+  //min-height: 380px;
+  line-height: 0;
+  height: 40vh;
+  position: relative;
+
+
+  /* The image used */
+  background-image: url("../img/super123/super-123-big.jpg");
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+
+
+// Icon Bloc Section
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+// PRODUCTS SECTION
+
+#card_section {
+
+  .card_section_title {
+    text-align: center;
+    margin-bottom: 50px;
+    .title_border {
+      width: 20%;
+    }
+
+    h2 {
+      @include title-font();
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .self_card {
+    margin-top: 20px;
+    box-shadow: 1px 1px 15px 0px rgba(78, 149, 210, 0.4);
+    border-radius: 5px;
+    height: 400px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:hover {
+      box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4);
+    }
+
+    .card_header {
+      width: 90%;
+      box-shadow: 1px 1px 25px 0px rgba(51, 117, 162, 0.51);
+      border-radius: 10px;
+      height: 70px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      position: relative;
+      top: -30px;
+
+      background-color: $card_bg;
+      //background: linear-gradient(to right, rgb(187, 110, 114), rgb(154, 170, 170));
+      color: #eefff3;
+      .card_header_content {
+        text-align: center;
+        font-size: 2rem;
+        width: 70%;
+        height: 70%;
+        font-family: $text-me;
+        margin: auto;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+
+        img {
+          height: 2.2rem;
+          vertical-align: middle;
+        }
+      }
+
+    }
+    .card_content {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        margin: 0;
+        word-wrap: break-word;
+      }
+    }
+
+    .card_icons_container {
+      margin: 0;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      position: absolute;
+      display: block;
+      //left: 5%;
+      bottom: 20px;
+      left: 5%;
+      margin-top: 30px;
+      .col {
+        //background-color: #0D47A1;
+        //border-radius: 50%;
+        //width: 60px;
+        //height: 60px;
+        padding: 3px;
+
+        .card_icon {
+          background-color: $card_bg;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
+          position: relative;
+          margin: auto;
+          img {
+            position: relative;
+            height: 35px;
+            margin: auto;
+            display: block;
+          }
+        }
+      }
+      .icon_description {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-family: $main-font;
+        font-weight: 900;
+        color: #4e95d2;
+        background-color: white;
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
+        border-radius: 2px;
+        text-align: center;
+        display: block;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+// SCOLL ARROW
+.scroll_section a {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  //font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+#section07 a {
+  padding-top: 80px;
+}
+
+#section07 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+
+}
+
+#section07 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#section07 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+
+#section07 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.self_overlay {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(38, 79, 106, 0.8);
+  //z-index: ;
+  h5{
+    color: #fafafa;
+    font-size: 2.5em;
+    z-index: 800;
+  }
+}
+
+// Contact Section
+
+#contact_section {
+  .contact_container {
+
+    form {
+      //height: 10px;
+      margin-top: 60px;
+      //margin-bottom: 30px;
+      //width: 100%;
+      border-top: 4px solid $card_bg;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom: 3px solid $card_bg;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+      .contact_div_icon {
+        height: 70px;
+        width: 70px;
+        background-color: $card_bg;
+        border-radius: 50%;
+        position: relative;
+        left: calc((100% - 70px) / 2);
+        top: -30px;
+        border: 3px solid white;
+        i {
+          font-size: 35px;
+          margin: auto;
+          color: white;
+        }
+      }
+      .form_error{
+        margin-left: 3rem;
+      }
+    }
+    .my_email, .my_phone {
+
+      text-align: center;
+      background-color: $card_bg;
+      color: white;
+      box-shadow: 1px 1px 10px 0px rgba(78, 149, 210, 0.4);
+      border-radius: 10px;
+      margin-top: 30px;
+
+      .contact_img {
+        position: relative;
+        top: -20px;
+        height: 70px;
+        width: 70px;
+        margin: auto;
+        border-radius: 50%;
+        background-color: $card_bg;
+        border: 4px solid white;
+        box-shadow: 1px 1px 10px 0px rgba(78, 149, 210, 0.4);
+        i {
+          font-size: 2rem;
+          margin: auto;
+        }
+      }
+      p {
+        margin: 0;
+        font-family: $logo-font;
+        font-size: 1.3rem;
+        text-align: center;
+        padding-bottom: 15px;
+      }
+
+    }
+    .my_phone > p {
+      font-size: 3rem;
+    }
+    form {
+      //margin-top: 35px;
+    }
+  }
+  .contact_divider {
+    //width: 70%;
+
+
+
+  }
+  h4 {
+    @include title-font();
+
+  }
+}
+
+// Despre Section
+
+#despre {
+  h2 {
+    @include title-font();
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  #btn_to_gallery {
+    text-align: center;
+    width: 100%;
+    a {
+      //background-color: white;
+      color: $card_bg;
+      margin-top: 10px;
+
+    }
+  }
+
+  .rack_image_container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+    //padding: 10px;
+    img {
+      height: 100%;
+      margin: auto;
+      width: 100%;
+      box-shadow: 1px 1px 10px 0px rgba(95, 188, 210, 0.4);
+      border-radius: 10px;
+
+    }
+
+  }
+
+  .description_container {
+    margin-top: 30px;
+    p {
+      color: $main-color;
+      margin-top: 0;
+    }
+    .highlights {
+      height: 200px;
+      //width: 100%;
+      padding: 5px;
+      &:nth-child(n+4) {
+        margin-top: 15px;
+      }
+      .high_inner {
+        //background-color: #bbd5ff;
+        //height: 50px;
+
+        img {
+          height: 70px;
+          //width: 50px;
+
+          margin: auto;
+          display: block;
+          //border: 3px solid $card_bg;
+          border-radius: 50%;
+
+          box-shadow: 1px 1px 20px 0px rgba(95, 188, 210, 0.4);
+        }
+        .high_divider {
+          border: 1px solid rgba(82, 82, 82, 0.52);
+          margin-top: 15px;
+          margin-bottom: 5px;
+          width: 30%;
+          margin-left: auto;
+          margin-right: auto;
+
+        }
+        .high_title {
+          text-align: center;
+          font-family: $logo-font;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        .high_content {
+          margin-top: 5px;
+          text-align: center;
+          font-size: .8em;
+          height: 60px;
+          overflow: hidden;
+        }
+      }
+      &:hover {
+        .high_divider {
+          width: 70%;
+          background-color: $card_bg;
+        }
+      }
+    }
+  }
+
+  .afla_mai_multe {
+    margin-top: 40px;
+    //margin-bottom: 100px;
+    border: 2px solid $card_bg;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: $card_bg;
+      color: white;
+    }
+  }
+
+  .despre_icons {
+    margin-top: 30px;
+    .fa-photo {
+      background-color: white;
+    }
+    .despre_i {
+      //position: relative;
+      margin-top: 40px;
+      background-color: $card_bg;
+      //height: 100px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 10px 0px rgba(95, 188, 210, 0.4);
+      &:hover {
+        box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4);
+      }
+      .despre_i_img {
+        height: 70px;
+        width: 70px;
+        margin: auto;
+        border-radius: 50%;
+        background-color: $card_bg;
+        box-shadow: 1px 1px 15px 0px rgba(95, 188, 210, 0.4);
+        &:hover {
+          box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4);
+        }
+        position: relative;
+        top: -25px;
+        border: 4px solid white;
+        img {
+          height: 40px;
+          width: 40px;
+          margin: auto;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        //padding-bottom: 10px;
+        font-family: $logo-font;
+        color: white;
+        position: relative;
+        top: -15px;
+      }
+
+    }
+  }
+}
+
+.title_border {
+  border-top: 3px solid $card_bg;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+// FOOTER
+
+.page-footer {
+  background-color: #E0E0E0 !important;
+  .container {
+    //color: $card_bg !important;
+    h5 {
+      @include title-font();
+      font-size: 2em;
+    }
+    .title_border {
+      //border-top: 3px solid #fafafa;
+    }
+     img{
+        height: 40px;
+    }
+  }
+  .footer_divider {
+    border-top: 1px solid #fafafa;
+  }
+  .footer-copyright {
+    img {
+      margin-top: 20px;
+    }
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+    p {
+      color: #888;
+    }
+  }
+}

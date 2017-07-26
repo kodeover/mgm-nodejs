@@ -1,0 +1,17 @@
+{
+  "name": "mgm-nodejs",
+  "version": "1.0.0",
+  "description": "MGM Storage Solutions - Solutii de depozitare pentru tine sau afacerea ta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kode Over",
+  "license": "ISC",
+  "dependencies": {
+    "angular-resource": "^1.6.5",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  }
+}

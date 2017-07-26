@@ -1,0 +1,142 @@
+//Index banner section
+
+//.parallax-container .section {
+//  position: absolute;
+//  top: 40%;
+//}
+
+.container {
+  width: 85%;
+}
+
+// NAVBAR
+#nav_bar {
+
+  #logo-container {
+
+    font-size: 1.4rem;
+
+  }
+}
+
+//INDEX SECTION
+#index-banner .section {
+  //top: 10%;
+  .main_logo {
+    font-size: 1.3rem;
+  }
+}
+
+// Card section
+#card_section {
+  .card_section_title {
+    .title_border {
+      width: 8%;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+// Despre Section
+#despre {
+
+  .rack_image_container {
+    img {
+      //height: 70vh;
+    }
+  }
+
+  .description_container {
+
+    .highlights {
+      .high_inner {
+        img {
+        }
+        .high_divider {
+        }
+        .high_title {
+          font-size: 1.1rem;
+        }
+        .high_content {
+          font-size: .9em;
+        }
+      }
+
+    }
+  }
+
+}
+
+// Contact section
+#contact_section {
+  .contact_container {
+    .my_email {
+      p {
+        font-size: 1.7rem;
+      }
+
+    }
+    .my_phone {
+      margin-top: 30px;
+      font-size: 3rem;
+    }
+
+    .my_email, .my_phone {
+      &:hover {
+        box-shadow: 1px 1px 5px 0px rgba(190, 198, 210, 0.4);
+      }
+    }
+  }
+}
+
+// Footer Section
+
+// Altele
+.title_border {
+
+  width: 15%;
+
+}
+
+//Photo gallery
+
+#gallery_arrows {
+  width: 100%;
+  height: 100%;
+  //background-color: rgba(78, 149, 210, 0.37);
+  z-index: 40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .arrows {
+    width: 100%;
+    img {
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.05);
+      &:first-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.16);
+          box-shadow: 1px 1px 15px 0px rgba(34, 36, 37, 0.4);
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
+      &:last-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.16);
+          box-shadow: 1px 1px 15px 0px rgba(34, 36, 37, 0.4);
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+
+      }
+    }
+  }
+
+}
