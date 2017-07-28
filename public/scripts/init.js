@@ -8,7 +8,6 @@
         // SELF PARALLAX
 
 
-
         //Side Nav
 
         // $('.button-collapse').sideNav({
@@ -44,8 +43,8 @@
         });
 
         //  Sticky Navbar
-        $navbar_height = $('nav').height();
-        $navbar = $('nav');
+        $navbar_height = $('#nav_bar').height();
+        $navbar = $('#nav_bar');
         $menu_items = $('#nav_bar ul a');
         $logo = $('nav .brand-logo');
         $main_logo = $('#logo-container img');
@@ -165,6 +164,11 @@
 
         });
 
+
+        //    POPUP PIC trademark
+
+
+        
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space

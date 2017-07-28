@@ -110,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ui-sref="app.rezidential">
                         <div class="despre_i">
                             <div class="despre_i_img valign-wrapper">
                                 <img src="../img/despre/house.svg">
@@ -312,54 +312,57 @@
                             <i class="fa fa-comments" aria-hidden="true"></i>
                         </div>
 
-                        <div class="input-field col s12 m12 l12">
+                        <div class="input-field col s12 m12 l12 animated" ng-hide="!formError.isError" ng-class="{'fadeOut':!formError.isError}">
                             <i class="fa fa-user-o prefix" aria-hidden="true"></i>
-                            <input id="first_name" type="text" class="validate" ng-model="message.name" ng-class="{'invalid': serverFormFeedback.name === false, 'valid': serverFormFeedback.name === true}">
+                            <input name="name" id="first_name" type="text" class="validate" ng-model="message.name" ng-class="{'invalid': serverFormFeedback.name === false, 'valid': serverFormFeedback.name === true}">
                             <label for="first_name" >Nume</label>
-                            <div  class="form_error ng-show" ng-show="!serverFormFeedback.name ">Am dori să știm cum vă numiți!</div>
+                            <div  class="form_error" ng-show="!formError.name">Am dori să știm cum vă numiți!</div>
                         </div>
 
 
-                        <div class="input-field col s12 m6 l6">
+                        <div class="input-field col s12 m6 l6" ng-hide="!formError.isError">
                             <i class="fa fa-envelope-o prefix" aria-hidden="true"></i>
                             <input id="email" type="text" class="validate" ng-model="message.email" ng-class="{'invalid': serverFormFeedback.email === false, 'valid': serverFormFeedback.email === true}">
                             <label for="email" >Email</label>
-                            <div class="form_error" ng-show="!serverFormFeedback.email">Vă rugăm să introduceți o adresă de email validă!</div>
+                            <div class="form_error" ng-show="!formError.email">Vă rugăm să introduceți o adresă de email validă!</div>
                         </div>
 
-                        <div class="input-field col s12 m6 l6">
+                        <div class="input-field col s12 m6 l6" ng-hide="!formError.isError">
                             <i class="fa fa-phone prefix" aria-hidden="true"></i>
                             <input id="tel" type="text" class="validate" ng-model="message.phone" ng-class="{'invalid': serverFormFeedback.phone === false, 'valid': serverFormFeedback.phone === true}">
                             <label for="tel" >Telefon</label>
-                            <div class="form_error" ng-show="!serverFormFeedback.phone">Vă rugăm să introduceți un număr de telefon valid!</div>
+                            <div class="form_error" ng-show="!formError.phone">Vă rugăm să introduceți un număr de telefon valid!</div>
                         </div>
 
-                        <div class="input-field col s12">
+                        <div class="input-field col s12" ng-hide="!formError.isError">
                             <i class="fa fa-file-text-o prefix" aria-hidden="true"></i>
                             <textarea id="message" class="materialize-textarea" ng-model="message.message" ng-class="{'invalid': serverFormFeedback.message === false, 'valid': serverFormFeedback.message === true}"></textarea>
                             <label for="message">Mesaj</label>
-                            <div class="form_error" ng-show="!serverFormFeedback.message">Nu ați introdus niciun mesaj!</div>
+                            <div class="form_error" ng-show="!formError.message">Nu ați introdus niciun mesaj!</div>
                         </div>
 
-                        <div class="submit_button col s12 center-align">
+                        <div class="submit_button col s12 center-align" ng-hide="!formError.isError">
 
                             <!--<a class="waves-effect waves-teal btn-flat" type="submit">-->
-                                <!--<i class="fa fa-send-o left" aria-hidden="true"></i>-->
-                                <!--Trimite</a>-->
-                            <button type="submit" >Send Feedback</button>
+                            <!--<i class="fa fa-send-o left" aria-hidden="true"></i>-->
+                            <!--Trimite</a>-->
+                            <button class="waves-effect waves-teal btn-flat" type="submit" ><i class="fa fa-send-o left" aria-hidden="true"></i>Trimite</button>
                         </div>
 
-                        <div>
-                            <p>Ce se vede:</p>
-                            <p>Nume: {{message.name}}</p>
-                            <p>Email: {{message.email}}</p>
-                            <p>Tel: {{message.tel}}</p>
-                            <p>Mesaj: {{message.message}}</p>
-                        </div>
-                        <div>
-                            <p>Server response: {{serverResponse}}</p>
-                            <p>Data type: {{serverResponseType}}</p>
-                        </div>
+                        <div class="feedback_message animated zoomIn" ng-show="!formError.isError">Mulțumim pentru mesaj! Vă vom răspunde în cel mai scurt timp!</div>
+
+                        <!--<div>-->
+                        <!--<p>Ce se vede:</p>-->
+                        <!--<p>Nume: {{message.name}}</p>-->
+                        <!--<p>Email: {{message.email}}</p>-->
+                        <!--<p>Tel: {{message.tel}}</p>-->
+                        <!--<p>Mesaj: {{message.message}}</p>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                        <!--<p>Server response: {{serverResponse}}</p>-->
+                        <!--<p>Data type: {{serverResponseType}}</p>-->
+                        <!--<p>Form error: {{formError}}</p>-->
+                        <!--</div>-->
 
                     </form>
 

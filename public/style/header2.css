@@ -1,10 +1,25 @@
-#before_nav {
-  height: 70px;
-  background-color: #fafafa; }
-
+@import url("https://fonts.googleapis.com/css?family=Offside|Questrial|Righteous|Text+Me+One");
 #nav_bar_2 {
-  height: 70px;
+  height: 80px;
   background-color: #fafafa;
-  box-shadow: 0px 8px 11px 0px rgba(38, 16, 58, 0.14);
-  position: sticky;
-  top: 0; }
+  box-shadow: 0px 8px 11px 0px rgba(38, 16, 58, 0.14); }
+  #nav_bar_2 #logo_container_2 a {
+    background: -webkit-linear-gradient(#4e95d2, #050030);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Text Me One", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    font-size: 1.8rem;
+    position: relative;
+    font-family: "Offside", cursive; }
+    #nav_bar_2 #logo_container_2 a p {
+      display: inline; }
+      #nav_bar_2 #logo_container_2 a p span {
+        font-weight: 900; }
+    #nav_bar_2 #logo_container_2 a img {
+      height: 50px;
+      margin-left: 10px;
+      margin-right: 10px;
+      vertical-align: middle; }

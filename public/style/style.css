@@ -172,7 +172,7 @@ footer.page-footer {
     box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4); }
   #card_section .self_card .card_header {
     width: 90%;
-    box-shadow: 1px 1px 25px 0px rgba(51, 117, 162, 0.51);
+    box-shadow: 0px 10px 10px 0px rgba(51, 117, 162, 0.51);
     border-radius: 10px;
     height: 70px;
     margin-left: auto;
@@ -338,6 +338,16 @@ footer.page-footer {
       font-size: 35px;
       margin: auto;
       color: white; }
+  #contact_section .contact_container form .feedback_message {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4e95d2; }
+  #contact_section .contact_container form .form_error {
+    margin-left: 3rem;
+    color: orangered;
+    font-size: .8em;
+    position: relative;
+    top: -20px; }
 
 #contact_section .contact_container .my_email, #contact_section .contact_container .my_phone {
   text-align: center;

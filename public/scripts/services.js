@@ -97,12 +97,52 @@ angular.module('mgmApp')
 
         ]}
 
+        var rezidentialHighlights =  {'highlights': [
+            {
+                'icon': 'clockwise.svg',
+                'title': 'Quick Installation',
+                'content': 'The installation of the system is very quick and easy.'
+            },
+            {
+                'icon': 'bolts.svg',
+                'title': 'Fără șuruburi',
+                'content': 'Instalarea se face fără șuruburi.'
+            },
+            {
+                'icon': 'arrows-mix.svg',
+                'title': 'Versatile',
+                'content': 'The modular nature of the Super123 system ...'
+            },
+            {
+                'icon': 'drought.svg',
+                'title': 'Rustproof',
+                'content': 'The Super123 line is made of rustproof galvanized zinc coated steel.'
+            },
+            {
+                'icon': 'recommended.svg',
+                'title': 'High Quality',
+                'content': 'The Super123 is made from certified steel and carries the approval mark of TUV product service Gmbh.'
+            },
+            {
+                'icon': 'weight_blue.svg',
+                'title': 'Maximum Load Capacity',
+                'content': 'The maximum uniformly distributed load (UDL) capacity is dependent on the configuration '
+            }
+
+
+
+        ]}
+
         this.getProducts = function () {
             return products;
         }
 
         this.getHighlights = function () {
             return highlights;
+        }
+
+        this.getRezidentialHighs = function () {
+            return rezidentialHighlights;
         }
 
     }])
