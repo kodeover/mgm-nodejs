@@ -1,13 +1,10 @@
-<style>
-    main {
-        margin-top: 70px;
-    }
-</style>
 
-<main class="animated fadeInLeft">
+
+<main class="animated fadeIn">
 
     <div id="title_section" class="container">
         <h3>{{mainTitle}}</h3>
+        <div class="title_div"></div>
         <h4>{{mainSubtitle}}</h4>
     </div>
 
@@ -23,105 +20,93 @@
         </div>
     </div>
 
-    <div id="highlights_section">
-        <div class="row container">
-            <div class="col s12 m12 l12">
-                <div class="description_container">
+    <!--<div id="highlights_section">-->
+        <!--<div class="row container">-->
+            <!--<div class="col s12 m12 l12">-->
+                <!--<div class="description_container">-->
 
-                    <div class="row">
-                        <div class="col s4 m4 l4 highlights" ng-repeat="h in highlights.highlights">
-                            <div class="high_inner">
-                                <img src="../img/{{h.icon}}">
-                                <div class="high_divider"></div>
-                                <div class="high_title">
-                                    {{h.title}}
-                                </div>
-                                <div class="high_content">
-                                    {{h.content}}
-                                </div>
-                            </div>
-                        </div>
-
-
+                    <!--<div class="row">-->
+                        <!--<div class="col s6 m4 l4 highlights" ng-repeat="h in highlights.highlights">-->
+                            <!--<div class="high_inner">-->
+                                <!--<img src="../img/{{h.icon}}">-->
+                                <!--<div class="high_divider"></div>-->
+                                <!--<div class="high_title">-->
+                                    <!--{{h.title}}-->
+                                <!--</div>-->
+                                <!--<div class="high_content">-->
+                                    <!--{{h.content}}-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
 
 
-                    </div>
+                    <!--</div>-->
 
-                </div>
-            </div>
-        </div>
-    </div>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
-    <div id="gallery_section">
-        <div class="row container zoom-gallery">
+    <!--<div id="gallery_section">-->
+        <!--<div class="gallery_title">-->
+            <!--Galerie Foto-->
+        <!--</div>-->
 
-            <div class="col s4 m4 l2">
-                <div class="pic">
-                    <img class="pic_img" src="../img/pages/rezidential/residential-main.jpg">
-                </div>
-            </div>
+        <!--<div class="title_div"></div>-->
 
-            <div class="pic_modal">
-                <div class="modal_content">
-                    <img class="modal_img" src="" id="img01">
-                </div>
-            </div>
+        <!--<div class="row container gallery_content">-->
 
-            <div class="col s4 m4 l2">
-                <div class="pic">
-                    <img class="" src="../img/pages/rezidential/residential-main.jpg">
-                </div>
-            </div>
+            <!--<div class="col s4 m4 l2">-->
+                <!--<div class="pic">-->
+                    <!--<img class="materialboxed" src="../img/pages/rezidential/residential-main.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="col s4 m4 l2">
-                <div class="pic">
-                    <img class="" src="../img/pages/rezidential/residential-main.jpg">
-                </div>
-            </div>
+            <!--<div class="col s4 m4 l2">-->
+                <!--<div class="pic">-->
+                    <!--<img class="" src="https://photos.app.goo.gl/wXkbWP3ks9BD0iR52">-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="col s4 m4 l2">
-                <div class="pic">
-                    <img class="" src="../img/pages/rezidential/residential-main.jpg">
-                </div>
-            </div>
+            <!--<div class="col s4 m4 l2">-->
+                <!--<div class="pic">-->
+                    <!--<img class="" src="../img/pages/rezidential/residential-main.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="col s4 m4 l2">
-                <div class="pic">
-                    <img class="" src="../img/pages/rezidential/residential-main.jpg">
-                </div>
-            </div>
+            <!--<div class="col s4 m4 l2">-->
+                <!--<div class="pic">-->
+                    <!--<img class="" src="../img/pages/rezidential/residential-main.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="col s4 m4 l2">
-                <div class="pic pop_up_pic">
-                    <img class="" src="../img/pages/rezidential/residential-main.jpg">
-                </div>
-            </div>
+            <!--<div class="col s4 m4 l2">-->
+                <!--<div class="pic">-->
+                    <!--<img class="" src="../img/pages/rezidential/residential-main.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="col s4 m4 l2">-->
+                <!--<div class="pic">-->
+                    <!--<img class="" src="../img/pages/rezidential/residential-main.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
 
 
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="back_btn"><a ui-sref="app" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></a></div>
 
 </main>
 
 <script>
-    // Get the modal
-    var modal = document.getElementsByClassName('pic_modal');
 
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementsByClassName('pic_img');
-    var modalImg = document.getElementsByClassName('modal_img');
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-    };
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    $(document).ready(function () {
+        $('.materialboxed').materialbox();
+    });
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+
 </script>
+
