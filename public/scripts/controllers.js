@@ -9,6 +9,8 @@ angular.module('mgmApp')
         $scope.nm = 0;
         $scope.highlights = dataFactory.getHighlights();
 
+        // Send message
+
         $scope.message = {'name': '', 'email': '', 'phone': '', 'message': ''};
         $scope.formError = {'name': true, 'email': true, 'phone': true, 'message': true, 'isError': true};
 
@@ -34,7 +36,7 @@ angular.module('mgmApp')
                     //     $scope.formError[i] = $scope.serverResponse[i];
                     // }
 
-                    $scope.formError  = $scope.serverResponse;
+                    $scope.formError = $scope.serverResponse;
 
                     $scope.serverFormFeedback = response.data;
 
@@ -43,6 +45,7 @@ angular.module('mgmApp')
                     $scope.serverResponse = response.statusText;
                 });
         }
+
 
     }])
 
@@ -65,6 +68,10 @@ angular.module('mgmApp')
         $scope.bannerTitle = "Take Back The Man Cave";
         $scope.bannerCitat = "Whether you’re a neat freak or a pack rat, Hannibal has the shelving solution for you. If your basement needs some organizing, or your garage is too chaotic, the patented Metalsistem storage solutions can help.";
         $scope.highlights = dataFactory.getRezidentialHighs();
+
+        $scope.doTheBack = function () {
+            window.history.back();
+        };
     }])
 
     .controller('ComercialController', ['$scope', function ($scope) {

@@ -6,25 +6,28 @@
  * Made By MaterializeCSS.com
  */
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Offside|Questrial|Righteous|Text+Me+One');
+@import url('https://fonts.googleapis.com/css?family=Offside|Questrial|Righteous|Text+Me+One|Gruppo|Poiret+One');
 
 $logo-font: 'Offside', cursive;
 $main-font: 'Questrial', sans-serif;
 $text-me: 'Text Me One', sans-serif;
+$gruppo: 'Gruppo', cursive;
+$poiret: 'Poiret One', cursive;
 
 // Color
 
 $main-color: #181366;
-$card_bg: #4e95d2;
+$second_color: #3152a2;
 
 // Mixin
 
 @mixin title-font() {
-  background: -webkit-linear-gradient(#4e95d2, #050030);
+  background: -webkit-linear-gradient(#00a0d0, #002d5c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: $text-me;
+  font-family: $poiret;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 body {
@@ -195,6 +198,29 @@ body {
     height: auto;
     //top: 30%;
   }
+
+  .typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+
 }
 
 //==========================================
@@ -261,108 +287,128 @@ footer.page-footer {
     }
   }
 
-  .self_card {
-    margin-top: 20px;
-    box-shadow: 1px 1px 15px 0px rgba(78, 149, 210, 0.4);
-    border-radius: 5px;
-    height: 400px;
-    margin-bottom: 50px;
-    position: relative;
+  #cards {
+    //$list: (orange, purple, teal);
+    //
+    ////Add your each-loop here
+    //@each $item in $list {
+    //  .#{$item} {
+    //    background: $item;
+    //  }
+    //}
+    //
+    //@for $i from 1 through $total {
+    //  .ray:nth-child(#{$i}) {
+    //    background: blue;
+    //  }
+    //}
 
-    &:hover {
-      box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4);
-    }
-
-    .card_header {
-      width: 90%;
-      box-shadow: 0px 10px 10px 0px rgba(51, 117, 162, 0.51);
-      border-radius: 10px;
-      height: 70px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
+    .self_card {
+      margin-top: 20px;
+      box-shadow: 1px 1px 15px 0px rgba(78, 149, 210, 0.4);
+      border-radius: 5px;
+      height: 400px;
+      margin-bottom: 50px;
       position: relative;
-      top: -30px;
 
-      background-color: $card_bg;
-      //background: linear-gradient(to right, rgb(187, 110, 114), rgb(154, 170, 170));
-      color: #eefff3;
-      .card_header_content {
-        text-align: center;
-        font-size: 2rem;
-        width: 70%;
-        height: 70%;
-        font-family: $text-me;
-        margin: auto;
-        position: absolute;
-        left: 15%;
-        top: 15%;
-
-        img {
-          height: 2.2rem;
-          vertical-align: middle;
-        }
+      &:hover {
+        box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4);
       }
 
-    }
-    .card_content {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      p {
-        margin: 0;
-        word-wrap: break-word;
-      }
-    }
+      $card_color: #1f51a2;
 
-    .card_icons_container {
-      margin: 0;
-      width: 90%;
-      margin-right: auto;
-      margin-left: auto;
-      position: absolute;
-      display: block;
-      //left: 5%;
-      bottom: 20px;
-      left: 5%;
-      margin-top: 30px;
-      .col {
-        //background-color: #0D47A1;
-        //border-radius: 50%;
-        //width: 60px;
-        //height: 60px;
-        padding: 3px;
+      .card_header {
+        width: 90%;
+        box-shadow: 0px 10px 10px 0px rgba(51, 117, 162, 0.51);
+        border-radius: 10px;
+        height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: relative;
+        top: -30px;
 
-        .card_icon {
-          background-color: $card_bg;
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
-          position: relative;
+        background-color: $card_color;
+        //background: linear-gradient(to right, rgb(187, 110, 114), rgb(154, 170, 170));
+        color: #eefff3;
+        .card_header_content {
+          text-align: center;
+          font-size: 2rem;
+          width: 70%;
+          height: 70%;
+          font-family: $text-me;
           margin: auto;
+          position: absolute;
+          left: 15%;
+          top: 15%;
+
           img {
-            position: relative;
-            height: 35px;
-            margin: auto;
-            display: block;
+            height: 2.2rem;
+            vertical-align: middle;
           }
         }
+
       }
-      .icon_description {
-        margin-top: 5px;
-        margin-bottom: 0;
-        font-family: $main-font;
-        font-weight: 900;
-        color: #4e95d2;
-        background-color: white;
-        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
-        border-radius: 2px;
-        text-align: center;
-        display: block;
+      .card_content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         p {
           margin: 0;
-          padding: 0;
+          word-wrap: break-word;
+          color: $card_color;
+        }
+      }
+
+      .card_icons_container {
+        margin: 0;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        position: absolute;
+        display: block;
+        //left: 5%;
+        bottom: 20px;
+        left: 5%;
+        margin-top: 30px;
+        .col {
+          //background-color: #0D47A1;
+          //border-radius: 50%;
+          //width: 60px;
+          //height: 60px;
+          padding: 3px;
+
+          .card_icon {
+            background-color: $card_color;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
+            position: relative;
+            margin: auto;
+            img {
+              position: relative;
+              height: 35px;
+              margin: auto;
+              display: block;
+            }
+          }
+        }
+        .icon_description {
+          margin-top: 5px;
+          margin-bottom: 0;
+          font-family: $main-font;
+          font-weight: 900;
+          color: $card_color;
+          background-color: #fafafa;
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
+          border-radius: 2px;
+          text-align: center;
+          display: block;
+          p {
+            margin: 0;
+            padding: 0;
+          }
         }
       }
     }
@@ -474,10 +520,10 @@ footer.page-footer {
       margin-top: 60px;
       //margin-bottom: 30px;
       //width: 100%;
-      border-top: 4px solid $card_bg;
+      border-top: 4px solid $second_color;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      border-bottom: 3px solid $card_bg;
+      border-bottom: 3px solid $second_color;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       padding-bottom: 30px;
@@ -485,7 +531,7 @@ footer.page-footer {
       .contact_div_icon {
         height: 70px;
         width: 70px;
-        background-color: $card_bg;
+        background-color: $second_color;
         border-radius: 50%;
         position: relative;
         left: calc((100% - 70px) / 2);
@@ -500,7 +546,7 @@ footer.page-footer {
       .feedback_message {
         text-align: center;
         font-size:1.5em;
-        color: $card_bg;
+        color: $second_color;
       }
       .form_error {
         margin-left: 3rem;
@@ -513,7 +559,7 @@ footer.page-footer {
     .my_email, .my_phone {
 
       text-align: center;
-      background-color: $card_bg;
+      background-color: $second_color;
       color: white;
       box-shadow: 1px 1px 10px 0px rgba(78, 149, 210, 0.4);
       border-radius: 10px;
@@ -526,7 +572,7 @@ footer.page-footer {
         width: 70px;
         margin: auto;
         border-radius: 50%;
-        background-color: $card_bg;
+        background-color: $second_color;
         border: 4px solid white;
         box-shadow: 1px 1px 10px 0px rgba(78, 149, 210, 0.4);
         i {
@@ -577,7 +623,7 @@ footer.page-footer {
     width: 100%;
     a {
       //background-color: white;
-      color: $card_bg;
+      color: $second_color;
       margin-top: 10px;
 
     }
@@ -654,7 +700,7 @@ footer.page-footer {
       &:hover {
         .high_divider {
           width: 70%;
-          background-color: $card_bg;
+          background-color: $second_color;
         }
       }
     }
@@ -663,13 +709,13 @@ footer.page-footer {
   .afla_mai_multe {
     margin-top: 40px;
     //margin-bottom: 100px;
-    border: 2px solid $card_bg;
+    border: 2px solid $second_color;
     padding: 10px;
     border-radius: 10px;
     font-size: 1.5rem;
 
     &:hover {
-      background-color: $card_bg;
+      background-color: $second_color;
       color: white;
     }
   }
@@ -682,7 +728,7 @@ footer.page-footer {
     .despre_i {
       //position: relative;
       margin-top: 40px;
-      background-color: $card_bg;
+      background-color: $second_color;
       //height: 100px;
       border-radius: 10px;
       box-shadow: 1px 1px 10px 0px rgba(95, 188, 210, 0.4);
@@ -694,7 +740,7 @@ footer.page-footer {
         width: 70px;
         margin: auto;
         border-radius: 50%;
-        background-color: $card_bg;
+        background-color: $second_color;
         box-shadow: 1px 1px 15px 0px rgba(95, 188, 210, 0.4);
         &:hover {
           box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4);
@@ -724,12 +770,14 @@ footer.page-footer {
 }
 
 .title_border {
-  border-top: 3px solid $card_bg;
+  background-color: #002d5c;
+  height: 3px;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
   margin-bottom: 30px;
+  border-radius: 50px;
 }
 
 // FOOTER
@@ -765,3 +813,4 @@ footer.page-footer {
     }
   }
 }
+

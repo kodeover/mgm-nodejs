@@ -21,7 +21,7 @@
 
         // VIDEO
 
-        document.getElementById("video").play();
+        // document.getElementById("video").play();
 
         $(window).on('scroll', function () {
             var scrollTop = $(window).scrollTop(),
@@ -57,7 +57,7 @@
                 $navbar.addClass('sticky z-depth-1 animated fadeInDown');
                 $menu_items.addClass('sticky_items');
                 $logo.addClass('sticky_items');
-                $main_logo.attr('src', '../img/m_logo.svg');
+                $main_logo.attr('src', '../img/logo/mgm_logo.svg');
                 $button_collapse.css('color', '#444');
                 // $header.addClass('navbar-fixed');
                 $navbar.css('position', 'fixed');
@@ -68,7 +68,7 @@
                 $navbar.removeClass('sticky z-depth-1');
                 $menu_items.removeClass('sticky_items');
                 $logo.removeClass('sticky_items');
-                $main_logo.attr('src', '../img/m_logo_white.svg');
+                $main_logo.attr('src', '../img/logo/mgm_logo_white.svg');
                 $button_collapse.css('color', '#fafafa');
                 // $header.removeClass('navbar-fixed');
                 $navbar.css('position', 'absolute');
@@ -165,10 +165,20 @@
         });
 
 
-        //    POPUP PIC trademark
+        // Cards random color
+        var typed = new Typed('#main_title', {
+            strings: ['Soluții de de depozitare pentru tine',
+                'Soluții de de depozitare pentru afacerea ta',
+                'Sisteme de depozitare modulare și ușor de montat!'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 500,
+            smartBackspace: true, // this is a default
+            loop: true
+        });
 
 
-        
+
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space

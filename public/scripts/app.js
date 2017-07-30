@@ -2,7 +2,7 @@
 
 angular.module('mgmApp', ['ui.router', 'ngResource'])
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
 
             .state('app', {
@@ -91,6 +91,8 @@ angular.module('mgmApp', ['ui.router', 'ngResource'])
                 }
             });
 
+        //add this line in your routing code
+        // $locationProvider.html5Mode(true);
 
         $urlRouterProvider.otherwise('/');
 

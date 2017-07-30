@@ -9,7 +9,12 @@
         </video>
 
 
-        <h1 class="header center">Soluții de depozitare pentru tine sau afacerea ta.</h1>
+        <h1 id="main_title" class="center" ></h1>
+        <!--<div id="main_title">-->
+
+        <!--</div>-->
+
+
 
         <div id="section07" class="scroll_section">
             <a href="#despre"><span></span><span></span><span></span></a>
@@ -91,7 +96,7 @@
                 <!-- End of model-->
 
                 <div class="row despre_icons">
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4"ui-sref="app.comercial">
                         <div class="despre_i">
                             <div class="despre_i_img valign-wrapper">
                                 <img src="../img/despre/warehouse.svg">
@@ -101,7 +106,7 @@
                         </div>
                     </div>
 
-                    <div class="col s12 m4 l4">
+                    <div class="col s12 m4 l4" ui-sref="app.retail">
                         <div class="despre_i">
                             <div class="despre_i_img valign-wrapper">
                                 <img src="../img/despre/shop.svg">
@@ -150,9 +155,9 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="cards">
 
-                    <div ng-repeat="p in products.super123" class="col s12 m4 l4">
+                    <div ng-repeat="p in products.super123" class="col s12 m6 l4">
                         <a data-target="modal{{products.super123.indexOf(p)}}">
                             <div class="self_card">
 
@@ -210,22 +215,21 @@
                         </a>
                     </div>
 
-                    <!--Modal-->
-                    <div ng-repeat="p in products.super123" id="modal{{products.super123.indexOf(p)}}"
-                         class="modal modal-fixed-footer">
-                        <div class="modal-content">
-                            <h4>Model {{p.modelName}}</h4>
-                            <p>{{p.motto}}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ieși</a>
-                        </div>
-                    </div>
-
-                    <!-- End of producs card model-->
-
-
                 </div>
+
+                <!--Modal-->
+                <div ng-repeat="p in products.super123" id="modal{{products.super123.indexOf(p)}}"
+                     class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <h4>Model {{p.modelName}}</h4>
+                        <p>{{p.motto}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ieși</a>
+                    </div>
+                </div>
+
+                <!-- End of producs card model-->
             </div>
         </div>
 
@@ -361,5 +365,6 @@
     </div>
 
 </div>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="scripts/typed.js"></script>
 <script src="scripts/init.js"></script>

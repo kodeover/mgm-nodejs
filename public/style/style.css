@@ -5,7 +5,7 @@
  *
  * Made By MaterializeCSS.com
  */
-@import url("https://fonts.googleapis.com/css?family=Offside|Questrial|Righteous|Text+Me+One");
+@import url("https://fonts.googleapis.com/css?family=Offside|Questrial|Righteous|Text+Me+One|Gruppo|Poiret+One");
 body {
   font-family: "Questrial", sans-serif;
   font-size: 16px; }
@@ -122,6 +122,35 @@ body {
     -webkit-text-fill-color: transparent;
     position: relative;
     height: auto; }
+  #index-banner .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 p {
   line-height: 2rem; }
@@ -153,24 +182,25 @@ footer.page-footer {
   #card_section .card_section_title .title_border {
     width: 20%; }
   #card_section .card_section_title h2 {
-    background: -webkit-linear-gradient(#4e95d2, #050030);
+    background: -webkit-linear-gradient(#00a0d0, #002d5c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Text Me One", sans-serif;
+    font-family: "Poiret One", cursive;
     font-size: 3rem;
+    font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 0; }
 
-#card_section .self_card {
+#card_section #cards .self_card {
   margin-top: 20px;
   box-shadow: 1px 1px 15px 0px rgba(78, 149, 210, 0.4);
   border-radius: 5px;
   height: 400px;
   margin-bottom: 50px;
   position: relative; }
-  #card_section .self_card:hover {
+  #card_section #cards .self_card:hover {
     box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4); }
-  #card_section .self_card .card_header {
+  #card_section #cards .self_card .card_header {
     width: 90%;
     box-shadow: 0px 10px 10px 0px rgba(51, 117, 162, 0.51);
     border-radius: 10px;
@@ -180,9 +210,9 @@ footer.page-footer {
     display: block;
     position: relative;
     top: -30px;
-    background-color: #4e95d2;
+    background-color: #1f51a2;
     color: #eefff3; }
-    #card_section .self_card .card_header .card_header_content {
+    #card_section #cards .self_card .card_header .card_header_content {
       text-align: center;
       font-size: 2rem;
       width: 70%;
@@ -192,17 +222,18 @@ footer.page-footer {
       position: absolute;
       left: 15%;
       top: 15%; }
-      #card_section .self_card .card_header .card_header_content img {
+      #card_section #cards .self_card .card_header .card_header_content img {
         height: 2.2rem;
         vertical-align: middle; }
-  #card_section .self_card .card_content {
+  #card_section #cards .self_card .card_content {
     width: 90%;
     margin-left: auto;
     margin-right: auto; }
-    #card_section .self_card .card_content p {
+    #card_section #cards .self_card .card_content p {
       margin: 0;
-      word-wrap: break-word; }
-  #card_section .self_card .card_icons_container {
+      word-wrap: break-word;
+      color: #1f51a2; }
+  #card_section #cards .self_card .card_icons_container {
     margin: 0;
     width: 90%;
     margin-right: auto;
@@ -212,33 +243,33 @@ footer.page-footer {
     bottom: 20px;
     left: 5%;
     margin-top: 30px; }
-    #card_section .self_card .card_icons_container .col {
+    #card_section #cards .self_card .card_icons_container .col {
       padding: 3px; }
-      #card_section .self_card .card_icons_container .col .card_icon {
-        background-color: #4e95d2;
+      #card_section #cards .self_card .card_icons_container .col .card_icon {
+        background-color: #1f51a2;
         height: 50px;
         width: 50px;
         border-radius: 50%;
         box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
         position: relative;
         margin: auto; }
-        #card_section .self_card .card_icons_container .col .card_icon img {
+        #card_section #cards .self_card .card_icons_container .col .card_icon img {
           position: relative;
           height: 35px;
           margin: auto;
           display: block; }
-    #card_section .self_card .card_icons_container .icon_description {
+    #card_section #cards .self_card .card_icons_container .icon_description {
       margin-top: 5px;
       margin-bottom: 0;
       font-family: "Questrial", sans-serif;
       font-weight: 900;
-      color: #4e95d2;
-      background-color: white;
+      color: #1f51a2;
+      background-color: #fafafa;
       box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
       border-radius: 2px;
       text-align: center;
       display: block; }
-      #card_section .self_card .card_icons_container .icon_description p {
+      #card_section #cards .self_card .card_icons_container .icon_description p {
         margin: 0;
         padding: 0; }
 
@@ -317,10 +348,10 @@ footer.page-footer {
 
 #contact_section .contact_container form {
   margin-top: 60px;
-  border-top: 4px solid #4e95d2;
+  border-top: 4px solid #3152a2;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom: 3px solid #4e95d2;
+  border-bottom: 3px solid #3152a2;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-bottom: 30px;
@@ -328,7 +359,7 @@ footer.page-footer {
   #contact_section .contact_container form .contact_div_icon {
     height: 70px;
     width: 70px;
-    background-color: #4e95d2;
+    background-color: #3152a2;
     border-radius: 50%;
     position: relative;
     left: calc((100% - 70px) / 2);
@@ -341,7 +372,7 @@ footer.page-footer {
   #contact_section .contact_container form .feedback_message {
     text-align: center;
     font-size: 1.5em;
-    color: #4e95d2; }
+    color: #3152a2; }
   #contact_section .contact_container form .form_error {
     margin-left: 3rem;
     color: orangered;
@@ -351,7 +382,7 @@ footer.page-footer {
 
 #contact_section .contact_container .my_email, #contact_section .contact_container .my_phone {
   text-align: center;
-  background-color: #4e95d2;
+  background-color: #3152a2;
   color: white;
   box-shadow: 1px 1px 10px 0px rgba(78, 149, 210, 0.4);
   border-radius: 10px;
@@ -363,7 +394,7 @@ footer.page-footer {
     width: 70px;
     margin: auto;
     border-radius: 50%;
-    background-color: #4e95d2;
+    background-color: #3152a2;
     border: 4px solid white;
     box-shadow: 1px 1px 10px 0px rgba(78, 149, 210, 0.4); }
     #contact_section .contact_container .my_email .contact_img i, #contact_section .contact_container .my_phone .contact_img i {
@@ -380,18 +411,20 @@ footer.page-footer {
   font-size: 3rem; }
 
 #contact_section h4 {
-  background: -webkit-linear-gradient(#4e95d2, #050030);
+  background: -webkit-linear-gradient(#00a0d0, #002d5c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Text Me One", sans-serif;
-  font-size: 3rem; }
+  font-family: "Poiret One", cursive;
+  font-size: 3rem;
+  font-weight: 700; }
 
 #despre h2 {
-  background: -webkit-linear-gradient(#4e95d2, #050030);
+  background: -webkit-linear-gradient(#00a0d0, #002d5c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Text Me One", sans-serif;
+  font-family: "Poiret One", cursive;
   font-size: 3rem;
+  font-weight: 700;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 0; }
@@ -400,7 +433,7 @@ footer.page-footer {
   text-align: center;
   width: 100%; }
   #despre #btn_to_gallery a {
-    color: #4e95d2;
+    color: #3152a2;
     margin-top: 10px; }
 
 #despre .rack_image_container {
@@ -450,16 +483,16 @@ footer.page-footer {
       overflow: hidden; }
     #despre .description_container .highlights:hover .high_divider {
       width: 70%;
-      background-color: #4e95d2; }
+      background-color: #3152a2; }
 
 #despre .afla_mai_multe {
   margin-top: 40px;
-  border: 2px solid #4e95d2;
+  border: 2px solid #3152a2;
   padding: 10px;
   border-radius: 10px;
   font-size: 1.5rem; }
   #despre .afla_mai_multe:hover {
-    background-color: #4e95d2;
+    background-color: #3152a2;
     color: white; }
 
 #despre .despre_icons {
@@ -468,7 +501,7 @@ footer.page-footer {
     background-color: white; }
   #despre .despre_icons .despre_i {
     margin-top: 40px;
-    background-color: #4e95d2;
+    background-color: #3152a2;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 0px rgba(95, 188, 210, 0.4); }
     #despre .despre_icons .despre_i:hover {
@@ -478,7 +511,7 @@ footer.page-footer {
       width: 70px;
       margin: auto;
       border-radius: 50%;
-      background-color: #4e95d2;
+      background-color: #3152a2;
       box-shadow: 1px 1px 15px 0px rgba(95, 188, 210, 0.4);
       position: relative;
       top: -25px;
@@ -499,21 +532,24 @@ footer.page-footer {
       top: -15px; }
 
 .title_border {
-  border-top: 3px solid #4e95d2;
+  background-color: #002d5c;
+  height: 3px;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-radius: 50px; }
 
 .page-footer {
   background-color: #E0E0E0 !important; }
   .page-footer .container h5 {
-    background: -webkit-linear-gradient(#4e95d2, #050030);
+    background: -webkit-linear-gradient(#00a0d0, #002d5c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Text Me One", sans-serif;
+    font-family: "Poiret One", cursive;
     font-size: 3rem;
+    font-weight: 700;
     font-size: 2em; }
   .page-footer .container img {
     height: 40px; }
