@@ -167,16 +167,22 @@
 
         // Cards random color
         var typed = new Typed('#main_title', {
-            strings: ['Soluții de de depozitare pentru tine',
-                'Soluții de de depozitare pentru afacerea ta',
-                'Sisteme de depozitare modulare și ușor de montat!'],
+            strings: ['Cauți soluții de depozitare pentru acasă ?',
+                'Cauți soluții de depozitare pentru afacerea ta ?',
+                'Noi îți oferim o gamă variată de rafturi și accesorii potrivită pentru nevoile tale!',
+                'Sisteme de refturi modulare și ușor de montat.',
+                'O mulțime de accesorii potrivite fiecărei nevoi.'],
             typeSpeed: 100,
             backSpeed: 50,
             backDelay: 500,
             smartBackspace: true, // this is a default
-            loop: true
+            loop: true,
+            showCursor : false
         });
 
+        // strings: ['Soluții de depozitare pentru tine',
+        //     'Soluții de depozitare pentru afacerea ta',
+        //     'Sisteme de depozitare modulare și ușor de montat!'],
 
 
 

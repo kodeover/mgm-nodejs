@@ -13,11 +13,17 @@
 #card_section .card_section_title h2 {
   font-size: 2.5rem; }
 
+#despre .description_container .highlights:nth-child(n+4) {
+  margin-top: 15px; }
+
+#despre .description_container .highlights .high_inner img {
+  height: 100px; }
+
 #despre .description_container .highlights .high_inner .high_title {
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
 
 #despre .description_container .highlights .high_inner .high_content {
-  font-size: .9em; }
+  font-size: 1em; }
 
 #contact_section .contact_container .my_email p {
   font-size: 1.7rem; }

@@ -51,16 +51,20 @@
   .description_container {
 
     .highlights {
+      &:nth-child(n+4) {
+        margin-top: 15px;
+      }
       .high_inner {
         img {
+          height: 100px;
         }
         .high_divider {
         }
         .high_title {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
         }
         .high_content {
-          font-size: .9em;
+          font-size: 1em;
         }
       }
 
@@ -140,3 +144,4 @@
   }
 
 }
+

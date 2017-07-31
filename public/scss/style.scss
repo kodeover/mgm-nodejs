@@ -47,12 +47,12 @@ body {
 //}
 
 .self_valign {
-  display:-webkit-flex;
-  display:-ms-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 .sticky {
@@ -167,10 +167,9 @@ body {
   //background: linear-gradient(to right, rgba(54, 37, 75, 0.85), rgba(35, 50, 75, 0.85));
   //background: linear-gradient(to bottom, rgba(75, 2, 6, 0.86), rgba(6, 13, 75, 0.86));
   //background: linear-gradient(to bottom, rgba(45, 21, 77, 0.85), rgba(33, 61, 76, 0.85));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(52, 96, 135, 0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(37, 95, 162, 0.8));
+
   width: 100%;
-
-
 
   #video {
     position: fixed;
@@ -199,28 +198,6 @@ body {
     //top: 30%;
   }
 
-  .typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-  }
-  @keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-  }
-
 }
 
 //==========================================
@@ -233,16 +210,14 @@ p {
   line-height: 2rem;
 }
 
-#parallax_section{
+#parallax_section {
   //min-height: 380px;
   line-height: 0;
   height: 40vh;
   position: relative;
 
-
   /* The image used */
   background-image: url("../img/super123/super-123-big.jpg");
-
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -250,10 +225,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 
-
 }
-
-
 
 // Icon Bloc Section
 
@@ -304,18 +276,19 @@ footer.page-footer {
     //}
 
     .self_card {
-      margin-top: 20px;
+      margin-top: 40px;
       box-shadow: 1px 1px 15px 0px rgba(78, 149, 210, 0.4);
       border-radius: 5px;
       height: 400px;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       position: relative;
 
       &:hover {
         box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4);
+        cursor: pointer;
       }
 
-      $card_color: #1f51a2;
+      $card_color: #443b67;
 
       .card_header {
         width: 90%;
@@ -368,7 +341,7 @@ footer.page-footer {
         position: absolute;
         display: block;
         //left: 5%;
-        bottom: 20px;
+        bottom: 0;
         left: 5%;
         margin-top: 30px;
         .col {
@@ -394,22 +367,23 @@ footer.page-footer {
             }
           }
         }
-        .icon_description {
-          margin-top: 5px;
-          margin-bottom: 0;
-          font-family: $main-font;
-          font-weight: 900;
-          color: $card_color;
-          background-color: #fafafa;
-          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
-          border-radius: 2px;
-          text-align: center;
-          display: block;
-          p {
-            margin: 0;
-            padding: 0;
-          }
+        .card_i_divider {
+          width: 30%;
+          height: 2px;
+          background-color: #ba94c9;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+          border-radius: 10px;
         }
+        p {
+          margin-top: 5px;
+          padding: 0;
+          text-align: center;
+          color: $card_color;
+          font-weight: 900;
+        }
+
       }
     }
   }
@@ -494,8 +468,6 @@ footer.page-footer {
   }
 }
 
-
-
 .self_overlay {
   margin: 0;
   height: 100%;
@@ -503,7 +475,7 @@ footer.page-footer {
   position: absolute;
   background-color: rgba(38, 79, 106, 0.8);
   //z-index: ;
-  h5{
+  h5 {
     color: #fafafa;
     font-size: 2.5em;
     z-index: 800;
@@ -545,7 +517,7 @@ footer.page-footer {
       }
       .feedback_message {
         text-align: center;
-        font-size:1.5em;
+        font-size: 1.5em;
         color: $second_color;
       }
       .form_error {
@@ -599,8 +571,6 @@ footer.page-footer {
   .contact_divider {
     //width: 70%;
 
-
-
   }
   h4 {
     @include title-font();
@@ -647,7 +617,8 @@ footer.page-footer {
   }
 
   .description_container {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     p {
       color: $main-color;
       margin-top: 0;
@@ -656,7 +627,7 @@ footer.page-footer {
       height: 200px;
       //width: 100%;
       padding: 5px;
-      &:nth-child(n+4) {
+      &:nth-child(n+3) {
         margin-top: 15px;
       }
       .high_inner {
@@ -676,18 +647,19 @@ footer.page-footer {
         }
         .high_divider {
           border: 1px solid rgba(82, 82, 82, 0.52);
-          margin-top: 15px;
+          margin-top: 5px;
           margin-bottom: 5px;
-          width: 30%;
+          width: 20%;
           margin-left: auto;
           margin-right: auto;
 
         }
         .high_title {
+          margin-top: 15px;
           text-align: center;
-          font-family: $logo-font;
+          font-family: $poiret;
           font-size: 1rem;
-          font-weight: 600;
+          font-weight: 900;
         }
         .high_content {
           margin-top: 5px;
@@ -699,7 +671,7 @@ footer.page-footer {
       }
       &:hover {
         .high_divider {
-          width: 70%;
+          width: 50%;
           background-color: $second_color;
         }
       }
@@ -707,7 +679,7 @@ footer.page-footer {
   }
 
   .afla_mai_multe {
-    margin-top: 40px;
+    //margin-bottom: 100px;
     //margin-bottom: 100px;
     border: 2px solid $second_color;
     padding: 10px;
@@ -717,23 +689,26 @@ footer.page-footer {
     &:hover {
       background-color: $second_color;
       color: white;
+      cursor: pointer;
     }
   }
 
   .despre_icons {
-    margin-top: 30px;
+    margin-top: 70px;
+    margin-bottom: 50px;
     .fa-photo {
       background-color: white;
     }
     .despre_i {
       //position: relative;
-      margin-top: 40px;
+      margin-top: 50px;
       background-color: $second_color;
       //height: 100px;
       border-radius: 10px;
-      box-shadow: 1px 1px 10px 0px rgba(95, 188, 210, 0.4);
+      box-shadow: 0px 5px 10px 5px rgba(31, 81, 162, 0.4);
       &:hover {
-        box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4);
+        box-shadow: 1px 1px 5px 3px rgba(27, 48, 55, 0.4);
+        cursor: pointer;
       }
       .despre_i_img {
         height: 70px;
@@ -744,6 +719,7 @@ footer.page-footer {
         box-shadow: 1px 1px 15px 0px rgba(95, 188, 210, 0.4);
         &:hover {
           box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4);
+          cursor: pointer;
         }
         position: relative;
         top: -25px;
@@ -767,6 +743,14 @@ footer.page-footer {
 
     }
   }
+}
+
+// Photo Gallery
+#photo-gallery {
+  .slider {
+    margin-top: 50px;
+  }
+
 }
 
 .title_border {
@@ -793,8 +777,8 @@ footer.page-footer {
     .title_border {
       //border-top: 3px solid #fafafa;
     }
-     img{
-        height: 40px;
+    img {
+      height: 40px;
     }
   }
   .footer_divider {
@@ -811,6 +795,35 @@ footer.page-footer {
     p {
       color: #888;
     }
+  }
+}
+
+
+// MODAL
+.modal {
+
+  .modal-header {
+
+
+    padding: 5px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-right: 25px;
+
+    height: 60px;
+    h4 {
+      display: inline;
+      padding-left: 10px;
+    }
+    a {
+      display: inline;
+      color: #c2c0c2;
+    }
+  }
+  .modal-content {
+
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 

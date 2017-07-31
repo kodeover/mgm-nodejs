@@ -56,13 +56,14 @@
                         <div class="description_container">
 
                             <div class="row">
-                                <div class="col s4 m4 l4 highlights" ng-repeat="h in highlights.highlights">
+                                <div class="col s6 m4 l4 highlights" ng-repeat="h in highlights.highlights">
                                     <div class="high_inner">
                                         <img src="../img/{{h.icon}}">
-                                        <div class="high_divider"></div>
+
                                         <div class="high_title">
                                             {{h.title}}
                                         </div>
+                                        <div class="high_divider"></div>
                                         <div class="high_content">
                                             {{h.content}}
                                         </div>
@@ -179,34 +180,25 @@
                                         <div class="card_icon valign-wrapper">
                                             <img src="../img/height.svg">
                                         </div>
-                                        <div class="icon_description">
-                                            <P>Min: {{p.dimensions.height[0]}}m</P>
-                                            <div class="divider"></div>
-                                            <P>Max: {{p.dimensions.height[1]}}m</P>
-
-                                        </div>
+                                        <div class="card_i_divider"></div>
+                                        <P>Max: {{p.dimensions.height[1]}}m</P>
                                     </div>
 
                                     <div class="col s4 m4 l4 card_icon">
                                         <div class="card_icon valign-wrapper">
                                             <img src="../img/width.svg">
                                         </div>
-                                        <div class="icon_description">
-                                            <P>Min: {{p.dimensions.length[0]}}m</P>
-                                            <div class="divider"></div>
-                                            <P>Max: {{p.dimensions.length[1]}}m</P>
-                                        </div>
+                                        <div class="card_i_divider"></div>
+                                        <P>Max: {{p.dimensions.length[1]}}m</P>
                                     </div>
 
                                     <div class="col s4 m4 l4 card_icon">
                                         <div class="card_icon valign-wrapper">
                                             <img src="../img/weight.svg">
                                         </div>
-                                        <div class="icon_description">
-                                            <P>Min: {{p.dimensions.weight[0]}}kg</P>
-                                            <div class="divider"></div>
-                                            <P>Max: {{p.dimensions.weight[1]}}kg</P>
-                                        </div>
+                                        <div class="card_i_divider"></div>
+                                        <P>Max: {{p.dimensions.weight[1]}}kg</P>
+
                                     </div>
                                 </div>
 
@@ -219,14 +211,29 @@
 
                 <!--Modal-->
                 <div ng-repeat="p in products.super123" id="modal{{products.super123.indexOf(p)}}"
-                     class="modal modal-fixed-footer">
+                     class="modal">
+                    <div class="modal-header ">
+                        <h4 >Model {{p.modelName}}</h4>
+                        <a  href="#!"> <i class="modal-close material-icons right">close</i></a>
+                    </div>
                     <div class="modal-content">
-                        <h4>Model {{p.modelName}}</h4>
+                        <p>{{p.motto}}</p>
+                        <br>
+                        <br>
+                        <br>
+                        <p>{{p.motto}}</p>
+                        <p>{{p.motto}}</p>
+                        <br>
+                        <br>
+                        <br>
+                        <p>{{p.motto}}</p>
+                        <p>{{p.motto}}</p>
+                        <br>
+                        <br>
+                        <br>
                         <p>{{p.motto}}</p>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ieși</a>
-                    </div>
+
                 </div>
 
                 <!-- End of producs card model-->
@@ -298,7 +305,7 @@
                     </div>
 
 
-                    <form class="row" name="contactForm" ng-submit="sendMessage()"  novalidate>
+                    <form id="form" class="row" name="contactForm" ng-submit="sendMessage()"  novalidate>
 
                         <div class="contact_div_icon valign-wrapper">
                             <i class="fa fa-comments" aria-hidden="true"></i>
@@ -341,7 +348,7 @@
                             <button class="waves-effect waves-teal btn-flat" type="submit" ><i class="fa fa-send-o left" aria-hidden="true"></i>Trimite</button>
                         </div>
 
-                        <div class="feedback_message animated zoomIn" ng-show="!formError.isError">Mulțumim pentru mesaj! Vă vom răspunde în cel mai scurt timp!</div>
+                        <a href="#form"></a> <div class="feedback_message animated zoomIn" ng-show="!formError.isError">Mulțumim pentru mesaj! Vă vom răspunde în cel mai scurt timp!</div></a>
 
                         <!--<div>-->
                         <!--<p>Ce se vede:</p>-->
@@ -365,6 +372,7 @@
     </div>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
 <script src="scripts/typed.js"></script>
 <script src="scripts/init.js"></script>

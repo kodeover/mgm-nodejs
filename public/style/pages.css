@@ -64,7 +64,7 @@ main {
         main #highlights_section .description_container .highlights:nth-child(n+4) {
           margin-top: 15px; }
         main #highlights_section .description_container .highlights .high_inner img {
-          height: 70px;
+          height: 100px;
           margin: auto;
           display: block;
           border-radius: 50%;

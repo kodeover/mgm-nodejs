@@ -99,7 +99,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(52, 96, 135, 0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(37, 95, 162, 0.8));
   width: 100%; }
   #index-banner #video {
     position: fixed;
@@ -122,35 +122,6 @@ body {
     -webkit-text-fill-color: transparent;
     position: relative;
     height: auto; }
-  #index-banner .typed-cursor {
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite; }
-
-@keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-moz-keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 p {
   line-height: 2rem; }
@@ -192,14 +163,15 @@ footer.page-footer {
     margin-bottom: 0; }
 
 #card_section #cards .self_card {
-  margin-top: 20px;
+  margin-top: 40px;
   box-shadow: 1px 1px 15px 0px rgba(78, 149, 210, 0.4);
   border-radius: 5px;
   height: 400px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative; }
   #card_section #cards .self_card:hover {
-    box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4); }
+    box-shadow: 1px 1px 10px 0px rgba(38, 16, 58, 0.4);
+    cursor: pointer; }
   #card_section #cards .self_card .card_header {
     width: 90%;
     box-shadow: 0px 10px 10px 0px rgba(51, 117, 162, 0.51);
@@ -210,7 +182,7 @@ footer.page-footer {
     display: block;
     position: relative;
     top: -30px;
-    background-color: #1f51a2;
+    background-color: #443b67;
     color: #eefff3; }
     #card_section #cards .self_card .card_header .card_header_content {
       text-align: center;
@@ -232,7 +204,7 @@ footer.page-footer {
     #card_section #cards .self_card .card_content p {
       margin: 0;
       word-wrap: break-word;
-      color: #1f51a2; }
+      color: #443b67; }
   #card_section #cards .self_card .card_icons_container {
     margin: 0;
     width: 90%;
@@ -240,13 +212,13 @@ footer.page-footer {
     margin-left: auto;
     position: absolute;
     display: block;
-    bottom: 20px;
+    bottom: 0;
     left: 5%;
     margin-top: 30px; }
     #card_section #cards .self_card .card_icons_container .col {
       padding: 3px; }
       #card_section #cards .self_card .card_icons_container .col .card_icon {
-        background-color: #1f51a2;
+        background-color: #443b67;
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -258,20 +230,20 @@ footer.page-footer {
           height: 35px;
           margin: auto;
           display: block; }
-    #card_section #cards .self_card .card_icons_container .icon_description {
+    #card_section #cards .self_card .card_icons_container .card_i_divider {
+      width: 30%;
+      height: 2px;
+      background-color: #ba94c9;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      border-radius: 10px; }
+    #card_section #cards .self_card .card_icons_container p {
       margin-top: 5px;
-      margin-bottom: 0;
-      font-family: "Questrial", sans-serif;
-      font-weight: 900;
-      color: #1f51a2;
-      background-color: #fafafa;
-      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.51);
-      border-radius: 2px;
+      padding: 0;
       text-align: center;
-      display: block; }
-      #card_section #cards .self_card .card_icons_container .icon_description p {
-        margin: 0;
-        padding: 0; }
+      color: #443b67;
+      font-weight: 900; }
 
 .scroll_section a {
   position: absolute;
@@ -448,14 +420,15 @@ footer.page-footer {
     border-radius: 10px; }
 
 #despre .description_container {
-  margin-top: 30px; }
+  margin-top: 50px;
+  margin-bottom: 50px; }
   #despre .description_container p {
     color: #181366;
     margin-top: 0; }
   #despre .description_container .highlights {
     height: 200px;
     padding: 5px; }
-    #despre .description_container .highlights:nth-child(n+4) {
+    #despre .description_container .highlights:nth-child(n+3) {
       margin-top: 15px; }
     #despre .description_container .highlights .high_inner img {
       height: 70px;
@@ -465,16 +438,17 @@ footer.page-footer {
       box-shadow: 1px 1px 20px 0px rgba(95, 188, 210, 0.4); }
     #despre .description_container .highlights .high_inner .high_divider {
       border: 1px solid rgba(82, 82, 82, 0.52);
-      margin-top: 15px;
+      margin-top: 5px;
       margin-bottom: 5px;
-      width: 30%;
+      width: 20%;
       margin-left: auto;
       margin-right: auto; }
     #despre .description_container .highlights .high_inner .high_title {
+      margin-top: 15px;
       text-align: center;
-      font-family: "Offside", cursive;
+      font-family: "Poiret One", cursive;
       font-size: 1rem;
-      font-weight: 600; }
+      font-weight: 900; }
     #despre .description_container .highlights .high_inner .high_content {
       margin-top: 5px;
       text-align: center;
@@ -482,30 +456,32 @@ footer.page-footer {
       height: 60px;
       overflow: hidden; }
     #despre .description_container .highlights:hover .high_divider {
-      width: 70%;
+      width: 50%;
       background-color: #3152a2; }
 
 #despre .afla_mai_multe {
-  margin-top: 40px;
   border: 2px solid #3152a2;
   padding: 10px;
   border-radius: 10px;
   font-size: 1.5rem; }
   #despre .afla_mai_multe:hover {
     background-color: #3152a2;
-    color: white; }
+    color: white;
+    cursor: pointer; }
 
 #despre .despre_icons {
-  margin-top: 30px; }
+  margin-top: 70px;
+  margin-bottom: 50px; }
   #despre .despre_icons .fa-photo {
     background-color: white; }
   #despre .despre_icons .despre_i {
-    margin-top: 40px;
+    margin-top: 50px;
     background-color: #3152a2;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px 0px rgba(95, 188, 210, 0.4); }
+    box-shadow: 0px 5px 10px 5px rgba(31, 81, 162, 0.4); }
     #despre .despre_icons .despre_i:hover {
-      box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4); }
+      box-shadow: 1px 1px 5px 3px rgba(27, 48, 55, 0.4);
+      cursor: pointer; }
     #despre .despre_icons .despre_i .despre_i_img {
       height: 70px;
       width: 70px;
@@ -517,7 +493,8 @@ footer.page-footer {
       top: -25px;
       border: 4px solid white; }
       #despre .despre_icons .despre_i .despre_i_img:hover {
-        box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4); }
+        box-shadow: 1px 1px 5px 0px rgba(27, 48, 55, 0.4);
+        cursor: pointer; }
       #despre .despre_icons .despre_i .despre_i_img img {
         height: 40px;
         width: 40px;
@@ -530,6 +507,9 @@ footer.page-footer {
       color: white;
       position: relative;
       top: -15px; }
+
+#photo-gallery .slider {
+  margin-top: 50px; }
 
 .title_border {
   background-color: #002d5c;
@@ -561,3 +541,20 @@ footer.page-footer {
     margin-top: 0; }
   .page-footer .footer-copyright p {
     color: #888; }
+
+.modal .modal-header {
+  padding: 5px;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-right: 25px;
+  height: 60px; }
+  .modal .modal-header h4 {
+    display: inline;
+    padding-left: 10px; }
+  .modal .modal-header a {
+    display: inline;
+    color: #c2c0c2; }
+
+.modal .modal-content {
+  margin-left: 25px;
+  margin-right: 25px; }
