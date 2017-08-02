@@ -2,9 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
-// var hostname = 'localhost';
-// var port = 3000;
-
+var productsRouter = require('./routes/productsRouter');
 
 var app = express();
 
@@ -15,6 +13,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
+
+app.use('/products', productsRouter);
 
 app.get('/', function (req, res, next) {
     res.render('index.html');

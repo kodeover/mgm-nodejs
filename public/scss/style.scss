@@ -16,8 +16,9 @@ $poiret: 'Poiret One', cursive;
 
 // Color
 
-$main-color: #181366;
-$second_color: #3152a2;
+$main-color: #2196F3;
+$second_color: #1565C0;
+
 
 // Mixin
 
@@ -28,6 +29,18 @@ $second_color: #3152a2;
   font-family: $poiret;
   font-size: 3rem;
   font-weight: 700;
+}
+
+@mixin blue_gradient_1() {
+  background: -webkit-linear-gradient(#00a0d0, #002d5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin  red_gradient_1(){
+  background: -webkit-linear-gradient(#00a0d0, #002d5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
@@ -288,11 +301,11 @@ footer.page-footer {
         cursor: pointer;
       }
 
-      $card_color: #443b67;
+      $card_color: #2068b2;
 
       .card_header {
         width: 90%;
-        box-shadow: 0px 10px 10px 0px rgba(51, 117, 162, 0.51);
+        box-shadow: 0px 10px 10px 0px rgba(29, 87, 188, 0.51);
         border-radius: 10px;
         height: 70px;
         margin-left: auto;
@@ -329,7 +342,7 @@ footer.page-footer {
         p {
           margin: 0;
           word-wrap: break-word;
-          color: $card_color;
+          @include blue_gradient_1();
         }
       }
 
@@ -370,7 +383,7 @@ footer.page-footer {
         .card_i_divider {
           width: 30%;
           height: 2px;
-          background-color: #ba94c9;
+          background-color: rgba(214, 30, 26, 0.71);
           margin-left: auto;
           margin-right: auto;
           margin-top: 10px;
@@ -633,6 +646,7 @@ footer.page-footer {
       .high_inner {
         //background-color: #bbd5ff;
         //height: 50px;
+        @include red_gradient_1();
 
         img {
           height: 70px;
@@ -804,12 +818,15 @@ footer.page-footer {
 
   .modal-header {
 
+    position: sticky;
+    top: 0;
+
+    background-color: #fafafa;
 
     padding: 5px;
     padding-left: 25px;
     padding-top: 20px;
     padding-right: 25px;
-
     height: 60px;
     h4 {
       display: inline;

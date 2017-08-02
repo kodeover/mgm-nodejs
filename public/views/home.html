@@ -9,11 +9,10 @@
         </video>
 
 
-        <h1 id="main_title" class="center" ></h1>
+        <h1 id="main_title" class="center"></h1>
         <!--<div id="main_title">-->
 
         <!--</div>-->
-
 
 
         <div id="section07" class="scroll_section">
@@ -84,20 +83,22 @@
                 </div>
 
                 <!--Modal-->
-                <div id="modal_despre" class="modal modal-fixed-footer">
-                    <div class="modal-content">
+                <div id="modal_despre" class="modal animated flipInX">
+                    <div class="modal-header">
                         <h4>Despre</h4>
-                        <p></p>
+                        <a href="#!"> <i class="modal-close material-icons right">close</i></a>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ieși</a>
+                    <div class="modal-content">
+
+                        <p>ddewdef</p>
                     </div>
+
                 </div>
 
                 <!-- End of model-->
 
                 <div class="row despre_icons">
-                    <div class="col s12 m4 l4"ui-sref="app.comercial">
+                    <div class="col s12 m4 l4" ui-sref="app.comercial">
                         <div class="despre_i">
                             <div class="despre_i_img valign-wrapper">
                                 <img src="../img/despre/warehouse.svg">
@@ -132,7 +133,7 @@
         <div id="parallax_section" class="scrollspy valign-wrapper">
 
             <!--<div class="">-->
-                <!--<img src="../img/super123/super-123-big.jpg" alt="Unsplashed background img 2">-->
+            <!--<img src="../img/super123/super-123-big.jpg" alt="Unsplashed background img 2">-->
             <!--</div>-->
             <div class="self_overlay self_valign">
 
@@ -211,10 +212,10 @@
 
                 <!--Modal-->
                 <div ng-repeat="p in products.super123" id="modal{{products.super123.indexOf(p)}}"
-                     class="modal">
+                     class="modal animated jackInTheBox">
                     <div class="modal-header ">
-                        <h4 >Model {{p.modelName}}</h4>
-                        <a  href="#!"> <i class="modal-close material-icons right">close</i></a>
+                        <h4>Model {{p.modelName}}</h4>
+                        <a href="#!"> <i class="modal-close material-icons right">close</i></a>
                     </div>
                     <div class="modal-content">
                         <p>{{p.motto}}</p>
@@ -226,6 +227,12 @@
                         <br>
                         <br>
                         <br>
+                        <p>{{p.motto}}</p>
+                        <p>{{p.motto}}</p>
+                        <br>
+                        <br>
+                        <br>
+                        <p>{{p.motto}}</p>
                         <p>{{p.motto}}</p>
                         <p>{{p.motto}}</p>
                         <br>
@@ -305,37 +312,46 @@
                     </div>
 
 
-                    <form id="form" class="row" name="contactForm" ng-submit="sendMessage()"  novalidate>
+                    <form id="form" class="row" name="contactForm" ng-submit="sendMessage()" novalidate>
 
                         <div class="contact_div_icon valign-wrapper">
                             <i class="fa fa-comments" aria-hidden="true"></i>
                         </div>
 
-                        <div class="input-field col s12 m12 l12 animated" ng-hide="!formError.isError" ng-class="{'fadeOut':!formError.isError}">
+                        <div class="input-field col s12 m12 l12 animated" ng-hide="!formError.isError"
+                             ng-class="{'fadeOut':!formError.isError}">
                             <i class="fa fa-user-o prefix" aria-hidden="true"></i>
-                            <input name="name" id="first_name" type="text" class="validate" ng-model="message.name" ng-class="{'invalid': serverFormFeedback.name === false, 'valid': serverFormFeedback.name === true}">
-                            <label for="first_name" >Nume</label>
-                            <div  class="form_error" ng-show="!formError.name">Am dori să știm cum vă numiți!</div>
+                            <input name="name" id="first_name" type="text" class="validate" ng-model="message.name"
+                                   ng-class="{'invalid': serverFormFeedback.name === false, 'valid': serverFormFeedback.name === true}">
+                            <label for="first_name">Nume</label>
+                            <div class="form_error" ng-show="!formError.name">Am dori să știm cum vă numiți!</div>
                         </div>
 
 
                         <div class="input-field col s12 m6 l6" ng-hide="!formError.isError">
                             <i class="fa fa-envelope-o prefix" aria-hidden="true"></i>
-                            <input id="email" type="text" class="validate" ng-model="message.email" ng-class="{'invalid': serverFormFeedback.email === false, 'valid': serverFormFeedback.email === true}">
-                            <label for="email" >Email</label>
-                            <div class="form_error" ng-show="!formError.email">Vă rugăm să introduceți o adresă de email validă!</div>
+                            <input id="email" type="text" class="validate" ng-model="message.email"
+                                   ng-class="{'invalid': serverFormFeedback.email === false, 'valid': serverFormFeedback.email === true}">
+                            <label for="email">Email</label>
+                            <div class="form_error" ng-show="!formError.email">Vă rugăm să introduceți o adresă de email
+                                validă!
+                            </div>
                         </div>
 
                         <div class="input-field col s12 m6 l6" ng-hide="!formError.isError">
                             <i class="fa fa-phone prefix" aria-hidden="true"></i>
-                            <input id="tel" type="text" class="validate" ng-model="message.phone" ng-class="{'invalid': serverFormFeedback.phone === false, 'valid': serverFormFeedback.phone === true}">
-                            <label for="tel" >Telefon</label>
-                            <div class="form_error" ng-show="!formError.phone">Vă rugăm să introduceți un număr de telefon valid!</div>
+                            <input id="tel" type="text" class="validate" ng-model="message.phone"
+                                   ng-class="{'invalid': serverFormFeedback.phone === false, 'valid': serverFormFeedback.phone === true}">
+                            <label for="tel">Telefon</label>
+                            <div class="form_error" ng-show="!formError.phone">Vă rugăm să introduceți un număr de
+                                telefon valid!
+                            </div>
                         </div>
 
                         <div class="input-field col s12" ng-hide="!formError.isError">
                             <i class="fa fa-file-text-o prefix" aria-hidden="true"></i>
-                            <textarea id="message" class="materialize-textarea" ng-model="message.message" ng-class="{'invalid': serverFormFeedback.message === false, 'valid': serverFormFeedback.message === true}"></textarea>
+                            <textarea id="message" class="materialize-textarea" ng-model="message.message"
+                                      ng-class="{'invalid': serverFormFeedback.message === false, 'valid': serverFormFeedback.message === true}"></textarea>
                             <label for="message">Mesaj</label>
                             <div class="form_error" ng-show="!formError.message">Nu ați introdus niciun mesaj!</div>
                         </div>
@@ -345,31 +361,57 @@
                             <!--<a class="waves-effect waves-teal btn-flat" type="submit">-->
                             <!--<i class="fa fa-send-o left" aria-hidden="true"></i>-->
                             <!--Trimite</a>-->
-                            <button class="waves-effect waves-teal btn-flat" type="submit" ><i class="fa fa-send-o left" aria-hidden="true"></i>Trimite</button>
+                            <button class="waves-effect waves-teal btn-flat" type="submit"><i class="fa fa-send-o left"
+                                                                                              aria-hidden="true"></i>Trimite
+                            </button>
                         </div>
 
-                        <a href="#form"></a> <div class="feedback_message animated zoomIn" ng-show="!formError.isError">Mulțumim pentru mesaj! Vă vom răspunde în cel mai scurt timp!</div></a>
+                        <div class="feedback_message animated zoomIn" ng-show="!formError.isError">
+                            Mulțumim pentru mesaj! Vă vom răspunde în cel mai scurt timp!
+                            <a data-target="modal_mesaj">...vezi mesaj</a>
+                        </div>
 
-                        <!--<div>-->
-                        <!--<p>Ce se vede:</p>-->
-                        <!--<p>Nume: {{message.name}}</p>-->
-                        <!--<p>Email: {{message.email}}</p>-->
-                        <!--<p>Tel: {{message.tel}}</p>-->
-                        <!--<p>Mesaj: {{message.message}}</p>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                        <!--<p>Server response: {{serverResponse}}</p>-->
-                        <!--<p>Data type: {{serverResponseType}}</p>-->
-                        <!--<p>Form error: {{formError}}</p>-->
-                        <!--</div>-->
+                        <!--Modal-->
+                        <div id="modal_mesaj"
+                             class="modal animated jackInTheBox">
+                            <div class="modal-header ">
+                                <h4>Mesaj trimis</h4>
+                                <a href="#!"> <i class="modal-close material-icons right">close</i></a>
+                            </div>
+                            <div class="modal-content">
+                                <p>Ce se vede:</p>
+                                <p>Nume: {{message.name}}</p>
+                                <p>Email: {{message.email}}</p>
+                                <p>Tel: {{message.phone}}</p>
+                                <p>Mesaj: {{message.message}}</p>
+                            </div>
 
-                    </form>
+                        </div>
 
                 </div>
 
+                <!-- End of producs card model-->
+
+                <!--<div>-->
+                <!--<p>Ce se vede:</p>-->
+                <!--<p>Nume: {{message.name}}</p>-->
+                <!--<p>Email: {{message.email}}</p>-->
+                <!--<p>Tel: {{message.tel}}</p>-->
+                <!--<p>Mesaj: {{message.message}}</p>-->
+                <!--</div>-->
+                <!--<div>-->
+                <!--<p>Server response: s{{serverResponse}}</p>-->
+                <!--<p>Data type: {{serverResponseType}}</p>-->
+                <!--<p>Form error: {{formError}}</p>-->
+                <!--</div>-->
+
+                </form>
+
             </div>
+
         </div>
     </div>
+</div>
 
 </div>
 
